@@ -1,0 +1,7 @@
+.aienv
+__pycache__/
+.ipynb_checkpoints/
+data/processed/*
+data/raw/*
+!data/raw/.gitkeep
+scripts/__pycache__
