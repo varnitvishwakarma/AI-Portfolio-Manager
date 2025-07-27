@@ -1,9 +1,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import os
+import pandas as pd
+
+# ===== Paths =====
+results_path = r"D:\AI_Portfolio_Project\results"
 
 # ===== Load daily returns =====
-results_path = r"D:\AI_Portfolio_Project\results"
 lstm_returns = np.load(os.path.join(results_path, "daily_ret_lstm.npy"))
 trans_returns = np.load(os.path.join(results_path, "daily_ret_trans.npy"))
 
@@ -47,3 +50,21 @@ plt.grid(True)
 plt.tight_layout()
 plt.savefig(os.path.join(results_path, "drawdowns.png"))
 plt.show()
+
+# ===== Load and display metrics tables =====
+perf_metrics_path = os.path.join(results_path, "performance_metrics.csv")
+pred_perf_path = os.path.join(results_path, "prediction_performance.csv")
+
+if os.path.exists(perf_metrics_path):
+    perf_df = pd.read_csv(perf_metrics_path)
+    print("\n📊 Performance Metrics Table:\n")
+    print(perf_df.to_string(index=False))
+else:
+    print("\n⚠️ Performance metrics CSV not found.")
+
+if os.path.exists(pred_perf_path):
+    pred_df = pd.read_csv(pred_perf_path)
+    print("\n📈 Prediction Performance Table:\n")
+    print(pred_df.to_string(index=False))
+else:
+    print("\n⚠️ Prediction performance CSV not found.")

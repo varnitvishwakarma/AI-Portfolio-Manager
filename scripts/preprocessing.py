@@ -24,11 +24,15 @@ for file in files:
     df = df.rename(columns=str.title)
     df = add_features(df)
     df = df.dropna().reset_index(drop=True)
-    feature_cols = ['LogReturn','MA_5','MA_21','Volatility_21','RSI']
+
+    # ✅ Normalize only feature columns (NOT LogReturn)
+    feature_cols = ['MA_5', 'MA_21', 'Volatility_21', 'RSI']
     for col in feature_cols:
         mean = df[col].mean()
         std = df[col].std()
         df[col] = (df[col] - mean) / std
+
+    # ✅ Keep LogReturn as is
     out_path = os.path.join(processed_path, file)
     df.to_csv(out_path, index=False)
     print(f"✅ Processed and saved: {out_path}")

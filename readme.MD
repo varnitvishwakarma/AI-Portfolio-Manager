@@ -43,7 +43,7 @@ python scripts/models_lstm.py
 python scripts/models_transformer.py
 
 #### 📌 5. Run Portfolio Strategy & Print Metrics
-python scripts/run_project.py
+python scripts/run_evaulate.py
 
 
 Metrics such as Annualized Return, Volatility, Sharpe Ratio, and Max Drawdown will be printed in the console.

@@ -1,0 +1,3 @@
+Strategy,Annual Return (%),Volatility (%),Sharpe Ratio,Max Drawdown (%)
+LSTM Strategy,-42.98%,16.04%,-2.68,-5.74%
+Transformer Strategy,11.75%,13.07%,0.90,-2.26%
