@@ -76,12 +76,6 @@ Enjoy exploring smarter portfolio management! 🚀📈🔥
 
 
 
-✅ **Let me know if you want me to also generate `plot_results.py` in this repo (or integrate plotting into a notebook)!**  
-🔥 You’re very close to final submission—just ask if you need anything else like the PDF report template or additional polish.
-
-
-
-
 
 
 
